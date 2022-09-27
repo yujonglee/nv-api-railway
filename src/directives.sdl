@@ -1,0 +1,7 @@
+"""
+Custom directives go here
+"""
+
+# Examples:
+# directive @example1 on FIELD_DEFINITION
+# directive @example2 on INPUT_OBJECT | FIELD_DEFINITION

@@ -1,0 +1,56 @@
+# ======= DO NOT EDIT =======
+# This file is auto-generated
+# ---------------------------
+
+# GraphQL SDL Reference: https://graphql.org/learn/schema/
+
+enum CartScalarFieldEnum {
+  id
+  createdAt
+  updatedAt
+  userId
+  coupon
+}
+
+enum ProductScalarFieldEnum {
+  id
+  name
+  price
+  image
+  createdAt
+  updatedAt
+}
+
+enum QueryMode {
+  default
+  insensitive
+}
+
+enum SortOrder {
+  asc
+  desc
+}
+
+enum TransactionIsolationLevel {
+  ReadUncommitted
+  ReadCommitted
+  RepeatableRead
+  Serializable
+}
+
+enum UserScalarFieldEnum {
+  id
+  name
+  username
+  email
+  password
+  createdAt
+  updatedAt
+}
+
+# Health check level of detail
+enum nvHealthCheckEnum {
+  shallow
+  normal
+  deep
+}

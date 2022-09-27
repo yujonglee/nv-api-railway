@@ -1,0 +1,760 @@
+# ======= DO NOT EDIT =======
+# This file is auto-generated
+# ---------------------------
+
+# GraphQL SDL Reference: https://graphql.org/learn/schema/
+
+
+type Cart  {
+  """
+    @readOnly
+  """
+  id: String,
+  """
+    @readOnly
+  """
+  createdAt: DateTime,
+  """
+    @readOnly
+  """
+  updatedAt: DateTime,
+  user: User,
+  userId: String,
+  items: [Product],
+  coupon: String,
+}
+
+input CartWhereInput  {
+  AND: [CartWhereInput],
+  OR: [CartWhereInput],
+  NOT: [CartWhereInput],
+  """
+    @readOnly
+  """
+  id: StringFilter,
+  """
+    @readOnly
+  """
+  createdAt: DateTimeFilter,
+  """
+    @readOnly
+  """
+  updatedAt: DateTimeFilter,
+  user: UserRelationFilter,
+  userId: StringFilter,
+  items: ProductListRelationFilter,
+  coupon: StringNullableFilter,
+}
+
+input CartOrderByWithRelationInput  {
+  """
+    @readOnly
+  """
+  id: SortOrder,
+  """
+    @readOnly
+  """
+  createdAt: SortOrder,
+  """
+    @readOnly
+  """
+  updatedAt: SortOrder,
+  user: UserOrderByWithRelationInput,
+  userId: SortOrder,
+  items: ProductOrderByRelationAggregateInput,
+  coupon: SortOrder,
+}
+
+input CartWhereUniqueInput  {
+  """
+    @readOnly
+  """
+  id: String,
+  userId: String,
+}
+
+input CartOrderByWithAggregationInput  {
+  """
+    @readOnly
+  """
+  id: SortOrder,
+  """
+    @readOnly
+  """
+  createdAt: SortOrder,
+  """
+    @readOnly
+  """
+  updatedAt: SortOrder,
+  userId: SortOrder,
+  coupon: SortOrder,
+  _count: CartCountOrderByAggregateInput,
+  _max: CartMaxOrderByAggregateInput,
+  _min: CartMinOrderByAggregateInput,
+}
+
+input CartScalarWhereWithAggregatesInput  {
+  AND: [CartScalarWhereWithAggregatesInput],
+  OR: [CartScalarWhereWithAggregatesInput],
+  NOT: [CartScalarWhereWithAggregatesInput],
+  """
+    @readOnly
+  """
+  id: StringWithAggregatesFilter,
+  """
+    @readOnly
+  """
+  createdAt: DateTimeWithAggregatesFilter,
+  """
+    @readOnly
+  """
+  updatedAt: DateTimeWithAggregatesFilter,
+  userId: StringWithAggregatesFilter,
+  coupon: StringNullableWithAggregatesFilter,
+}
+
+input CartCreateInput  {
+  user: UserCreateNestedOneWithoutCartInput!,
+  items: ProductCreateNestedManyWithoutCartsInput,
+  coupon: String,
+}
+
+input CartUncheckedCreateInput  {
+  userId: String!,
+  items: ProductUncheckedCreateNestedManyWithoutCartsInput,
+  coupon: String,
+}
+
+input CartUpdateInput  {
+  user: UserUpdateOneRequiredWithoutCartNestedInput,
+  items: ProductUpdateManyWithoutCartsNestedInput,
+  coupon: String,
+}
+
+input CartUncheckedUpdateInput  {
+  userId: String,
+  items: ProductUncheckedUpdateManyWithoutCartsNestedInput,
+  coupon: String,
+}
+
+input CartCreateManyInput  {
+  userId: String!,
+  coupon: String,
+}
+
+input CartUpdateManyMutationInput  {
+  coupon: String,
+}
+
+input CartUncheckedUpdateManyInput  {
+  userId: String,
+  coupon: String,
+}
+
+input CartRelationFilter  {
+  is: CartWhereInput,
+  isNot: CartWhereInput,
+}
+
+input CartCountOrderByAggregateInput  {
+  """
+    @readOnly
+  """
+  id: SortOrder,
+  """
+    @readOnly
+  """
+  createdAt: SortOrder,
+  """
+    @readOnly
+  """
+  updatedAt: SortOrder,
+  userId: SortOrder,
+  coupon: SortOrder,
+}
+
+input CartMaxOrderByAggregateInput  {
+  """
+    @readOnly
+  """
+  id: SortOrder,
+  """
+    @readOnly
+  """
+  createdAt: SortOrder,
+  """
+    @readOnly
+  """
+  updatedAt: SortOrder,
+  userId: SortOrder,
+  coupon: SortOrder,
+}
+
+input CartMinOrderByAggregateInput  {
+  """
+    @readOnly
+  """
+  id: SortOrder,
+  """
+    @readOnly
+  """
+  createdAt: SortOrder,
+  """
+    @readOnly
+  """
+  updatedAt: SortOrder,
+  userId: SortOrder,
+  coupon: SortOrder,
+}
+
+input CartListRelationFilter  {
+  every: CartWhereInput,
+  some: CartWhereInput,
+  none: CartWhereInput,
+}
+
+input CartOrderByRelationAggregateInput  {
+  _count: SortOrder,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input CartCreateNestedOneWithoutUserInputcreateOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: CartCreateWithoutUserInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relational: CartUncheckedCreateWithoutUserInput,
+}
+
+input CartCreateNestedOneWithoutUserInput  {
+  create: CartCreateNestedOneWithoutUserInputcreateOneOf,
+  connectOrCreate: CartCreateOrConnectWithoutUserInput,
+  connect: CartWhereUniqueInput,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input CartUncheckedCreateNestedOneWithoutUserInputcreateOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: CartCreateWithoutUserInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relational: CartUncheckedCreateWithoutUserInput,
+}
+
+input CartUncheckedCreateNestedOneWithoutUserInput  {
+  create: CartUncheckedCreateNestedOneWithoutUserInputcreateOneOf,
+  connectOrCreate: CartCreateOrConnectWithoutUserInput,
+  connect: CartWhereUniqueInput,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input CartUpdateOneWithoutUserNestedInputcreateOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: CartCreateWithoutUserInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relational: CartUncheckedCreateWithoutUserInput,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input CartUpdateOneWithoutUserNestedInputupdateOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: CartUpdateWithoutUserInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relational: CartUncheckedUpdateWithoutUserInput,
+}
+
+input CartUpdateOneWithoutUserNestedInput  {
+  create: CartUpdateOneWithoutUserNestedInputcreateOneOf,
+  connectOrCreate: CartCreateOrConnectWithoutUserInput,
+  upsert: CartUpsertWithoutUserInput,
+  disconnect: Boolean,
+  delete: Boolean,
+  connect: CartWhereUniqueInput,
+  update: CartUpdateOneWithoutUserNestedInputupdateOneOf,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input CartUncheckedUpdateOneWithoutUserNestedInputcreateOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: CartCreateWithoutUserInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relational: CartUncheckedCreateWithoutUserInput,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input CartUncheckedUpdateOneWithoutUserNestedInputupdateOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: CartUpdateWithoutUserInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relational: CartUncheckedUpdateWithoutUserInput,
+}
+
+input CartUncheckedUpdateOneWithoutUserNestedInput  {
+  create: CartUncheckedUpdateOneWithoutUserNestedInputcreateOneOf,
+  connectOrCreate: CartCreateOrConnectWithoutUserInput,
+  upsert: CartUpsertWithoutUserInput,
+  disconnect: Boolean,
+  delete: Boolean,
+  connect: CartWhereUniqueInput,
+  update: CartUncheckedUpdateOneWithoutUserNestedInputupdateOneOf,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input CartCreateNestedManyWithoutItemsInputcreateOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: [CartCreateWithoutItemsInput],
+  """
+    Relations represented by ids (FK)
+  """
+  relational: [CartUncheckedCreateWithoutItemsInput],
+}
+
+input CartCreateNestedManyWithoutItemsInput  {
+  create: CartCreateNestedManyWithoutItemsInputcreateOneOf,
+  connectOrCreate: [CartCreateOrConnectWithoutItemsInput],
+  connect: [CartWhereUniqueInput],
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input CartUncheckedCreateNestedManyWithoutItemsInputcreateOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: [CartCreateWithoutItemsInput],
+  """
+    Relations represented by ids (FK)
+  """
+  relational: [CartUncheckedCreateWithoutItemsInput],
+}
+
+input CartUncheckedCreateNestedManyWithoutItemsInput  {
+  create: CartUncheckedCreateNestedManyWithoutItemsInputcreateOneOf,
+  connectOrCreate: [CartCreateOrConnectWithoutItemsInput],
+  connect: [CartWhereUniqueInput],
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input CartUpdateManyWithoutItemsNestedInputcreateOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: [CartCreateWithoutItemsInput],
+  """
+    Relations represented by ids (FK)
+  """
+  relational: [CartUncheckedCreateWithoutItemsInput],
+}
+
+input CartUpdateManyWithoutItemsNestedInput  {
+  create: CartUpdateManyWithoutItemsNestedInputcreateOneOf,
+  connectOrCreate: [CartCreateOrConnectWithoutItemsInput],
+  upsert: [CartUpsertWithWhereUniqueWithoutItemsInput],
+  set: [CartWhereUniqueInput],
+  disconnect: [CartWhereUniqueInput],
+  delete: [CartWhereUniqueInput],
+  connect: [CartWhereUniqueInput],
+  update: [CartUpdateWithWhereUniqueWithoutItemsInput],
+  updateMany: [CartUpdateManyWithWhereWithoutItemsInput],
+  deleteMany: [CartScalarWhereInput],
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input CartUncheckedUpdateManyWithoutItemsNestedInputcreateOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: [CartCreateWithoutItemsInput],
+  """
+    Relations represented by ids (FK)
+  """
+  relational: [CartUncheckedCreateWithoutItemsInput],
+}
+
+input CartUncheckedUpdateManyWithoutItemsNestedInput  {
+  create: CartUncheckedUpdateManyWithoutItemsNestedInputcreateOneOf,
+  connectOrCreate: [CartCreateOrConnectWithoutItemsInput],
+  upsert: [CartUpsertWithWhereUniqueWithoutItemsInput],
+  set: [CartWhereUniqueInput],
+  disconnect: [CartWhereUniqueInput],
+  delete: [CartWhereUniqueInput],
+  connect: [CartWhereUniqueInput],
+  update: [CartUpdateWithWhereUniqueWithoutItemsInput],
+  updateMany: [CartUpdateManyWithWhereWithoutItemsInput],
+  deleteMany: [CartScalarWhereInput],
+}
+
+input CartCreateWithoutUserInput  {
+  items: ProductCreateNestedManyWithoutCartsInput,
+  coupon: String,
+}
+
+input CartUncheckedCreateWithoutUserInput  {
+  items: ProductUncheckedCreateNestedManyWithoutCartsInput,
+  coupon: String,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input CartCreateOrConnectWithoutUserInputcreateOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: CartCreateWithoutUserInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relational: CartUncheckedCreateWithoutUserInput,
+}
+
+input CartCreateOrConnectWithoutUserInput  {
+  where: CartWhereUniqueInput!,
+  create: CartCreateOrConnectWithoutUserInputcreateOneOf,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input CartUpsertWithoutUserInputupdateOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: CartUpdateWithoutUserInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relational: CartUncheckedUpdateWithoutUserInput,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input CartUpsertWithoutUserInputcreateOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: CartCreateWithoutUserInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relational: CartUncheckedCreateWithoutUserInput,
+}
+
+input CartUpsertWithoutUserInput  {
+  update: CartUpsertWithoutUserInputupdateOneOf,
+  create: CartUpsertWithoutUserInputcreateOneOf,
+}
+
+input CartUpdateWithoutUserInput  {
+  items: ProductUpdateManyWithoutCartsNestedInput,
+  coupon: String,
+}
+
+input CartUncheckedUpdateWithoutUserInput  {
+  items: ProductUncheckedUpdateManyWithoutCartsNestedInput,
+  coupon: String,
+}
+
+input CartCreateWithoutItemsInput  {
+  user: UserCreateNestedOneWithoutCartInput!,
+  coupon: String,
+}
+
+input CartUncheckedCreateWithoutItemsInput  {
+  userId: String!,
+  coupon: String,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input CartCreateOrConnectWithoutItemsInputcreateOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: CartCreateWithoutItemsInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relational: CartUncheckedCreateWithoutItemsInput,
+}
+
+input CartCreateOrConnectWithoutItemsInput  {
+  where: CartWhereUniqueInput!,
+  create: CartCreateOrConnectWithoutItemsInputcreateOneOf,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input CartUpsertWithWhereUniqueWithoutItemsInputupdateOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: CartUpdateWithoutItemsInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relational: CartUncheckedUpdateWithoutItemsInput,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input CartUpsertWithWhereUniqueWithoutItemsInputcreateOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: CartCreateWithoutItemsInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relational: CartUncheckedCreateWithoutItemsInput,
+}
+
+input CartUpsertWithWhereUniqueWithoutItemsInput  {
+  where: CartWhereUniqueInput!,
+  update: CartUpsertWithWhereUniqueWithoutItemsInputupdateOneOf,
+  create: CartUpsertWithWhereUniqueWithoutItemsInputcreateOneOf,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input CartUpdateWithWhereUniqueWithoutItemsInputdataOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: CartUpdateWithoutItemsInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relational: CartUncheckedUpdateWithoutItemsInput,
+}
+
+input CartUpdateWithWhereUniqueWithoutItemsInput  {
+  where: CartWhereUniqueInput!,
+  data: CartUpdateWithWhereUniqueWithoutItemsInputdataOneOf,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input CartUpdateManyWithWhereWithoutItemsInputdataOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nestedMany: CartUpdateManyMutationInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relationalManyWithoutCarts: CartUncheckedUpdateManyWithoutCartsInput,
+}
+
+input CartUpdateManyWithWhereWithoutItemsInput  {
+  where: CartScalarWhereInput!,
+  data: CartUpdateManyWithWhereWithoutItemsInputdataOneOf,
+}
+
+input CartScalarWhereInput  {
+  AND: [CartScalarWhereInput],
+  OR: [CartScalarWhereInput],
+  NOT: [CartScalarWhereInput],
+  """
+    @readOnly
+  """
+  id: StringFilter,
+  """
+    @readOnly
+  """
+  createdAt: DateTimeFilter,
+  """
+    @readOnly
+  """
+  updatedAt: DateTimeFilter,
+  userId: StringFilter,
+  coupon: StringNullableFilter,
+}
+
+input CartUpdateWithoutItemsInput  {
+  user: UserUpdateOneRequiredWithoutCartNestedInput,
+  coupon: String,
+}
+
+input CartUncheckedUpdateWithoutItemsInput  {
+  userId: String,
+  coupon: String,
+}
+
+input CartUncheckedUpdateManyWithoutCartsInput  {
+  userId: String,
+  coupon: String,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input createOneCartInput @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: CartCreateInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relational: CartUncheckedCreateInput,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input updateOneCartInput @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: CartUpdateInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relational: CartUncheckedUpdateInput,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input updateManyCartInput @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nestedMany: CartUpdateManyMutationInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relationalMany: CartUncheckedUpdateManyInput,
+}
+
+type AggregateCart  {
+  _count: CartCountAggregateOutputType,
+  _min: CartMinAggregateOutputType,
+  _max: CartMaxAggregateOutputType,
+}
+
+type CartGroupByOutputType  {
+  """
+    @readOnly
+  """
+  id: String,
+  """
+    @readOnly
+  """
+  createdAt: DateTime,
+  """
+    @readOnly
+  """
+  updatedAt: DateTime,
+  userId: String,
+  coupon: String,
+  _count: CartCountAggregateOutputType,
+  _min: CartMinAggregateOutputType,
+  _max: CartMaxAggregateOutputType,
+}
+
+type CartCountOutputType  {
+  items: Int,
+}
+
+type CartCountAggregateOutputType  {
+  """
+    @readOnly
+  """
+  id: Int,
+  """
+    @readOnly
+  """
+  createdAt: Int,
+  """
+    @readOnly
+  """
+  updatedAt: Int,
+  userId: Int,
+  coupon: Int,
+  _all: Int,
+}
+
+type CartMinAggregateOutputType  {
+  """
+    @readOnly
+  """
+  id: String,
+  """
+    @readOnly
+  """
+  createdAt: DateTime,
+  """
+    @readOnly
+  """
+  updatedAt: DateTime,
+  userId: String,
+  coupon: String,
+}
+
+type CartMaxAggregateOutputType  {
+  """
+    @readOnly
+  """
+  id: String,
+  """
+    @readOnly
+  """
+  createdAt: DateTime,
+  """
+    @readOnly
+  """
+  updatedAt: DateTime,
+  userId: String,
+  coupon: String,
+}

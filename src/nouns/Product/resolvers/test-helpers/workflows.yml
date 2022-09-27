@@ -1,0 +1,21 @@
+description: "Workflows to test 'Product' CURD resolvers"
+workflows:
+  - name: Product_Lifecycle_one
+    description: "Lifecycle workflow for a single 'Product' entity"
+    sequence:
+      - createOneProduct
+      - findFirstProduct
+      - updateOneProduct
+      - findUniqueProduct
+      - upsertOneProduct
+      - aggregateProduct
+      - groupByProduct
+      - deleteOneProduct
+      - aggregateProduct
+  - name: Product_Lifecycle_many
+    description: "Lifecycle workflow for multiple 'Product' entities"
+    sequence:
+      - createManyProduct
+      - findManyProduct
+      - updateManyProduct
+      - deleteManyProduct

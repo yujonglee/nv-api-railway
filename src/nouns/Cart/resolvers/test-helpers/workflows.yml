@@ -1,0 +1,21 @@
+description: "Workflows to test 'Cart' CURD resolvers"
+workflows:
+  - name: Cart_Lifecycle_one
+    description: "Lifecycle workflow for a single 'Cart' entity"
+    sequence:
+      - createOneCart
+      - findFirstCart
+      - updateOneCart
+      - findUniqueCart
+      - upsertOneCart
+      - aggregateCart
+      - groupByCart
+      - deleteOneCart
+      - aggregateCart
+  - name: Cart_Lifecycle_many
+    description: "Lifecycle workflow for multiple 'Cart' entities"
+    sequence:
+      - createManyCart
+      - findManyCart
+      - updateManyCart
+      - deleteManyCart

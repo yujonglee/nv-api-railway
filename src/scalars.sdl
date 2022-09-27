@@ -1,0 +1,9 @@
+# ======= DO NOT EDIT =======
+# This file is auto-generated
+# ---------------------------
+
+# GraphQL SDL Reference: https://graphql.org/learn/schema/
+
+scalar Json
+scalar Email
+scalar DateTime

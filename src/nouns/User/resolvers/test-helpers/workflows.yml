@@ -1,0 +1,21 @@
+description: "Workflows to test 'User' CURD resolvers"
+workflows:
+  - name: User_Lifecycle_one
+    description: "Lifecycle workflow for a single 'User' entity"
+    sequence:
+      - createOneUser
+      - findFirstUser
+      - updateOneUser
+      - findUniqueUser
+      - upsertOneUser
+      - aggregateUser
+      - groupByUser
+      - deleteOneUser
+      - aggregateUser
+  - name: User_Lifecycle_many
+    description: "Lifecycle workflow for multiple 'User' entities"
+    sequence:
+      - createManyUser
+      - findManyUser
+      - updateManyUser
+      - deleteManyUser

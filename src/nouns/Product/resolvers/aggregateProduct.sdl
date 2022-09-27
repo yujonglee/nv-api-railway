@@ -1,0 +1,15 @@
+# ======= DO NOT EDIT =======
+# This file is auto-generated
+# ---------------------------
+
+# GraphQL SDL Reference: https://graphql.org/learn/schema/
+
+extend type Query {
+  aggregateProduct (
+    where: ProductWhereInput,
+    orderBy: [ProductOrderByWithRelationInput],
+    cursor: ProductWhereUniqueInput,
+    take: Int,
+    skip: Int,
+  ): AggregateProduct!,
+}

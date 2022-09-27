@@ -1,0 +1,16 @@
+# ======= DO NOT EDIT =======
+# This file is auto-generated
+# ---------------------------
+
+# GraphQL SDL Reference: https://graphql.org/learn/schema/
+
+extend type Query {
+  groupByProduct (
+    where: ProductWhereInput,
+    orderBy: [ProductOrderByWithAggregationInput],
+    by: [ProductScalarFieldEnum]!,
+    having: ProductScalarWhereWithAggregatesInput,
+    take: Int,
+    skip: Int,
+  ): [ProductGroupByOutputType]!,
+}

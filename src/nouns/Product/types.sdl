@@ -1,0 +1,611 @@
+# ======= DO NOT EDIT =======
+# This file is auto-generated
+# ---------------------------
+
+# GraphQL SDL Reference: https://graphql.org/learn/schema/
+
+
+type Product  {
+  """
+    @readOnly
+  """
+  id: String,
+  name: String,
+  price: Int,
+  image: String,
+  """
+    @readOnly
+  """
+  createdAt: DateTime,
+  """
+    @readOnly
+  """
+  updatedAt: DateTime,
+  carts: [Cart],
+}
+
+input ProductWhereInput  {
+  AND: [ProductWhereInput],
+  OR: [ProductWhereInput],
+  NOT: [ProductWhereInput],
+  """
+    @readOnly
+  """
+  id: StringFilter,
+  name: StringFilter,
+  price: IntFilter,
+  image: StringFilter,
+  """
+    @readOnly
+  """
+  createdAt: DateTimeFilter,
+  """
+    @readOnly
+  """
+  updatedAt: DateTimeFilter,
+  carts: CartListRelationFilter,
+}
+
+input ProductOrderByWithRelationInput  {
+  """
+    @readOnly
+  """
+  id: SortOrder,
+  name: SortOrder,
+  price: SortOrder,
+  image: SortOrder,
+  """
+    @readOnly
+  """
+  createdAt: SortOrder,
+  """
+    @readOnly
+  """
+  updatedAt: SortOrder,
+  carts: CartOrderByRelationAggregateInput,
+}
+
+input ProductWhereUniqueInput  {
+  """
+    @readOnly
+  """
+  id: String,
+}
+
+input ProductOrderByWithAggregationInput  {
+  """
+    @readOnly
+  """
+  id: SortOrder,
+  name: SortOrder,
+  price: SortOrder,
+  image: SortOrder,
+  """
+    @readOnly
+  """
+  createdAt: SortOrder,
+  """
+    @readOnly
+  """
+  updatedAt: SortOrder,
+  _count: ProductCountOrderByAggregateInput,
+  _avg: ProductAvgOrderByAggregateInput,
+  _max: ProductMaxOrderByAggregateInput,
+  _min: ProductMinOrderByAggregateInput,
+  _sum: ProductSumOrderByAggregateInput,
+}
+
+input ProductScalarWhereWithAggregatesInput  {
+  AND: [ProductScalarWhereWithAggregatesInput],
+  OR: [ProductScalarWhereWithAggregatesInput],
+  NOT: [ProductScalarWhereWithAggregatesInput],
+  """
+    @readOnly
+  """
+  id: StringWithAggregatesFilter,
+  name: StringWithAggregatesFilter,
+  price: IntWithAggregatesFilter,
+  image: StringWithAggregatesFilter,
+  """
+    @readOnly
+  """
+  createdAt: DateTimeWithAggregatesFilter,
+  """
+    @readOnly
+  """
+  updatedAt: DateTimeWithAggregatesFilter,
+}
+
+input ProductCreateInput  {
+  name: String!,
+  price: Int!,
+  image: String!,
+  carts: CartCreateNestedManyWithoutItemsInput,
+}
+
+input ProductUncheckedCreateInput  {
+  name: String!,
+  price: Int!,
+  image: String!,
+  carts: CartUncheckedCreateNestedManyWithoutItemsInput,
+}
+
+input ProductUpdateInput  {
+  name: String,
+  price: Int,
+  image: String,
+  carts: CartUpdateManyWithoutItemsNestedInput,
+}
+
+input ProductUncheckedUpdateInput  {
+  name: String,
+  price: Int,
+  image: String,
+  carts: CartUncheckedUpdateManyWithoutItemsNestedInput,
+}
+
+input ProductCreateManyInput  {
+  name: String!,
+  price: Int!,
+  image: String!,
+}
+
+input ProductUpdateManyMutationInput  {
+  name: String,
+  price: Int,
+  image: String,
+}
+
+input ProductUncheckedUpdateManyInput  {
+  name: String,
+  price: Int,
+  image: String,
+}
+
+input ProductListRelationFilter  {
+  every: ProductWhereInput,
+  some: ProductWhereInput,
+  none: ProductWhereInput,
+}
+
+input ProductOrderByRelationAggregateInput  {
+  _count: SortOrder,
+}
+
+input ProductCountOrderByAggregateInput  {
+  """
+    @readOnly
+  """
+  id: SortOrder,
+  name: SortOrder,
+  price: SortOrder,
+  image: SortOrder,
+  """
+    @readOnly
+  """
+  createdAt: SortOrder,
+  """
+    @readOnly
+  """
+  updatedAt: SortOrder,
+}
+
+input ProductAvgOrderByAggregateInput  {
+  price: SortOrder,
+}
+
+input ProductMaxOrderByAggregateInput  {
+  """
+    @readOnly
+  """
+  id: SortOrder,
+  name: SortOrder,
+  price: SortOrder,
+  image: SortOrder,
+  """
+    @readOnly
+  """
+  createdAt: SortOrder,
+  """
+    @readOnly
+  """
+  updatedAt: SortOrder,
+}
+
+input ProductMinOrderByAggregateInput  {
+  """
+    @readOnly
+  """
+  id: SortOrder,
+  name: SortOrder,
+  price: SortOrder,
+  image: SortOrder,
+  """
+    @readOnly
+  """
+  createdAt: SortOrder,
+  """
+    @readOnly
+  """
+  updatedAt: SortOrder,
+}
+
+input ProductSumOrderByAggregateInput  {
+  price: SortOrder,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input ProductCreateNestedManyWithoutCartsInputcreateOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: [ProductCreateWithoutCartsInput],
+  """
+    Relations represented by ids (FK)
+  """
+  relational: [ProductUncheckedCreateWithoutCartsInput],
+}
+
+input ProductCreateNestedManyWithoutCartsInput  {
+  create: ProductCreateNestedManyWithoutCartsInputcreateOneOf,
+  connectOrCreate: [ProductCreateOrConnectWithoutCartsInput],
+  connect: [ProductWhereUniqueInput],
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input ProductUncheckedCreateNestedManyWithoutCartsInputcreateOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: [ProductCreateWithoutCartsInput],
+  """
+    Relations represented by ids (FK)
+  """
+  relational: [ProductUncheckedCreateWithoutCartsInput],
+}
+
+input ProductUncheckedCreateNestedManyWithoutCartsInput  {
+  create: ProductUncheckedCreateNestedManyWithoutCartsInputcreateOneOf,
+  connectOrCreate: [ProductCreateOrConnectWithoutCartsInput],
+  connect: [ProductWhereUniqueInput],
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input ProductUpdateManyWithoutCartsNestedInputcreateOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: [ProductCreateWithoutCartsInput],
+  """
+    Relations represented by ids (FK)
+  """
+  relational: [ProductUncheckedCreateWithoutCartsInput],
+}
+
+input ProductUpdateManyWithoutCartsNestedInput  {
+  create: ProductUpdateManyWithoutCartsNestedInputcreateOneOf,
+  connectOrCreate: [ProductCreateOrConnectWithoutCartsInput],
+  upsert: [ProductUpsertWithWhereUniqueWithoutCartsInput],
+  set: [ProductWhereUniqueInput],
+  disconnect: [ProductWhereUniqueInput],
+  delete: [ProductWhereUniqueInput],
+  connect: [ProductWhereUniqueInput],
+  update: [ProductUpdateWithWhereUniqueWithoutCartsInput],
+  updateMany: [ProductUpdateManyWithWhereWithoutCartsInput],
+  deleteMany: [ProductScalarWhereInput],
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input ProductUncheckedUpdateManyWithoutCartsNestedInputcreateOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: [ProductCreateWithoutCartsInput],
+  """
+    Relations represented by ids (FK)
+  """
+  relational: [ProductUncheckedCreateWithoutCartsInput],
+}
+
+input ProductUncheckedUpdateManyWithoutCartsNestedInput  {
+  create: ProductUncheckedUpdateManyWithoutCartsNestedInputcreateOneOf,
+  connectOrCreate: [ProductCreateOrConnectWithoutCartsInput],
+  upsert: [ProductUpsertWithWhereUniqueWithoutCartsInput],
+  set: [ProductWhereUniqueInput],
+  disconnect: [ProductWhereUniqueInput],
+  delete: [ProductWhereUniqueInput],
+  connect: [ProductWhereUniqueInput],
+  update: [ProductUpdateWithWhereUniqueWithoutCartsInput],
+  updateMany: [ProductUpdateManyWithWhereWithoutCartsInput],
+  deleteMany: [ProductScalarWhereInput],
+}
+
+input ProductCreateWithoutCartsInput  {
+  name: String!,
+  price: Int!,
+  image: String!,
+}
+
+input ProductUncheckedCreateWithoutCartsInput  {
+  name: String!,
+  price: Int!,
+  image: String!,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input ProductCreateOrConnectWithoutCartsInputcreateOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: ProductCreateWithoutCartsInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relational: ProductUncheckedCreateWithoutCartsInput,
+}
+
+input ProductCreateOrConnectWithoutCartsInput  {
+  where: ProductWhereUniqueInput!,
+  create: ProductCreateOrConnectWithoutCartsInputcreateOneOf,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input ProductUpsertWithWhereUniqueWithoutCartsInputupdateOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: ProductUpdateWithoutCartsInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relational: ProductUncheckedUpdateWithoutCartsInput,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input ProductUpsertWithWhereUniqueWithoutCartsInputcreateOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: ProductCreateWithoutCartsInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relational: ProductUncheckedCreateWithoutCartsInput,
+}
+
+input ProductUpsertWithWhereUniqueWithoutCartsInput  {
+  where: ProductWhereUniqueInput!,
+  update: ProductUpsertWithWhereUniqueWithoutCartsInputupdateOneOf,
+  create: ProductUpsertWithWhereUniqueWithoutCartsInputcreateOneOf,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input ProductUpdateWithWhereUniqueWithoutCartsInputdataOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: ProductUpdateWithoutCartsInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relational: ProductUncheckedUpdateWithoutCartsInput,
+}
+
+input ProductUpdateWithWhereUniqueWithoutCartsInput  {
+  where: ProductWhereUniqueInput!,
+  data: ProductUpdateWithWhereUniqueWithoutCartsInputdataOneOf,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input ProductUpdateManyWithWhereWithoutCartsInputdataOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nestedMany: ProductUpdateManyMutationInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relationalManyWithoutItems: ProductUncheckedUpdateManyWithoutItemsInput,
+}
+
+input ProductUpdateManyWithWhereWithoutCartsInput  {
+  where: ProductScalarWhereInput!,
+  data: ProductUpdateManyWithWhereWithoutCartsInputdataOneOf,
+}
+
+input ProductScalarWhereInput  {
+  AND: [ProductScalarWhereInput],
+  OR: [ProductScalarWhereInput],
+  NOT: [ProductScalarWhereInput],
+  """
+    @readOnly
+  """
+  id: StringFilter,
+  name: StringFilter,
+  price: IntFilter,
+  image: StringFilter,
+  """
+    @readOnly
+  """
+  createdAt: DateTimeFilter,
+  """
+    @readOnly
+  """
+  updatedAt: DateTimeFilter,
+}
+
+input ProductUpdateWithoutCartsInput  {
+  name: String,
+  price: Int,
+  image: String,
+}
+
+input ProductUncheckedUpdateWithoutCartsInput  {
+  name: String,
+  price: Int,
+  image: String,
+}
+
+input ProductUncheckedUpdateManyWithoutItemsInput  {
+  name: String,
+  price: Int,
+  image: String,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input createOneProductInput @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: ProductCreateInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relational: ProductUncheckedCreateInput,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input updateOneProductInput @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: ProductUpdateInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relational: ProductUncheckedUpdateInput,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input updateManyProductInput @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nestedMany: ProductUpdateManyMutationInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relationalMany: ProductUncheckedUpdateManyInput,
+}
+
+type AggregateProduct  {
+  _count: ProductCountAggregateOutputType,
+  _avg: ProductAvgAggregateOutputType,
+  _sum: ProductSumAggregateOutputType,
+  _min: ProductMinAggregateOutputType,
+  _max: ProductMaxAggregateOutputType,
+}
+
+type ProductGroupByOutputType  {
+  """
+    @readOnly
+  """
+  id: String,
+  name: String,
+  price: Int,
+  image: String,
+  """
+    @readOnly
+  """
+  createdAt: DateTime,
+  """
+    @readOnly
+  """
+  updatedAt: DateTime,
+  _count: ProductCountAggregateOutputType,
+  _avg: ProductAvgAggregateOutputType,
+  _sum: ProductSumAggregateOutputType,
+  _min: ProductMinAggregateOutputType,
+  _max: ProductMaxAggregateOutputType,
+}
+
+type ProductCountOutputType  {
+  carts: Int,
+}
+
+type ProductCountAggregateOutputType  {
+  """
+    @readOnly
+  """
+  id: Int,
+  name: Int,
+  price: Int,
+  image: Int,
+  """
+    @readOnly
+  """
+  createdAt: Int,
+  """
+    @readOnly
+  """
+  updatedAt: Int,
+  _all: Int,
+}
+
+type ProductAvgAggregateOutputType  {
+  price: Float,
+}
+
+type ProductSumAggregateOutputType  {
+  price: Int,
+}
+
+type ProductMinAggregateOutputType  {
+  """
+    @readOnly
+  """
+  id: String,
+  name: String,
+  price: Int,
+  image: String,
+  """
+    @readOnly
+  """
+  createdAt: DateTime,
+  """
+    @readOnly
+  """
+  updatedAt: DateTime,
+}
+
+type ProductMaxAggregateOutputType  {
+  """
+    @readOnly
+  """
+  id: String,
+  name: String,
+  price: Int,
+  image: String,
+  """
+    @readOnly
+  """
+  createdAt: DateTime,
+  """
+    @readOnly
+  """
+  updatedAt: DateTime,
+}

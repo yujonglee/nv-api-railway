@@ -1,0 +1,714 @@
+# ======= DO NOT EDIT =======
+# This file is auto-generated
+# ---------------------------
+
+# GraphQL SDL Reference: https://graphql.org/learn/schema/
+
+
+type User  {
+  """
+    @readOnly
+  """
+  id: String,
+  """
+    @mock faker.name.firstName
+  """
+  name: String,
+  """
+    @createOnly
+  """
+  username: String,
+  """
+    @scalar Email
+  """
+  email: Email,
+  """
+    @readOnly
+  """
+  createdAt: DateTime,
+  """
+    @readOnly
+  """
+  updatedAt: DateTime,
+  cart: Cart,
+}
+
+input UserWhereInput  {
+  AND: [UserWhereInput],
+  OR: [UserWhereInput],
+  NOT: [UserWhereInput],
+  """
+    @readOnly
+  """
+  id: StringFilter,
+  """
+    @mock faker.name.firstName
+  """
+  name: StringFilter,
+  """
+    @createOnly
+  """
+  username: StringFilter,
+  """
+    @scalar Email
+  """
+  email: StringFilter,
+  """
+    @readOnly
+  """
+  createdAt: DateTimeFilter,
+  """
+    @readOnly
+  """
+  updatedAt: DateTimeFilter,
+  cart: CartRelationFilter,
+}
+
+input UserOrderByWithRelationInput  {
+  """
+    @readOnly
+  """
+  id: SortOrder,
+  """
+    @mock faker.name.firstName
+  """
+  name: SortOrder,
+  """
+    @createOnly
+  """
+  username: SortOrder,
+  """
+    @scalar Email
+  """
+  email: SortOrder,
+  """
+    @readOnly
+  """
+  createdAt: SortOrder,
+  """
+    @readOnly
+  """
+  updatedAt: SortOrder,
+  cart: CartOrderByWithRelationInput,
+}
+
+input UserWhereUniqueInput  {
+  """
+    @readOnly
+  """
+  id: String,
+}
+
+input UserOrderByWithAggregationInput  {
+  """
+    @readOnly
+  """
+  id: SortOrder,
+  """
+    @mock faker.name.firstName
+  """
+  name: SortOrder,
+  """
+    @createOnly
+  """
+  username: SortOrder,
+  """
+    @scalar Email
+  """
+  email: SortOrder,
+  """
+    @readOnly
+  """
+  createdAt: SortOrder,
+  """
+    @readOnly
+  """
+  updatedAt: SortOrder,
+  _count: UserCountOrderByAggregateInput,
+  _max: UserMaxOrderByAggregateInput,
+  _min: UserMinOrderByAggregateInput,
+}
+
+input UserScalarWhereWithAggregatesInput  {
+  AND: [UserScalarWhereWithAggregatesInput],
+  OR: [UserScalarWhereWithAggregatesInput],
+  NOT: [UserScalarWhereWithAggregatesInput],
+  """
+    @readOnly
+  """
+  id: StringWithAggregatesFilter,
+  """
+    @mock faker.name.firstName
+  """
+  name: StringWithAggregatesFilter,
+  """
+    @createOnly
+  """
+  username: StringWithAggregatesFilter,
+  """
+    @scalar Email
+  """
+  email: StringWithAggregatesFilter,
+  """
+    @readOnly
+  """
+  createdAt: DateTimeWithAggregatesFilter,
+  """
+    @readOnly
+  """
+  updatedAt: DateTimeWithAggregatesFilter,
+}
+
+input UserCreateInput  {
+  """
+    @mock faker.name.firstName
+  """
+  name: String!,
+  """
+    @createOnly
+  """
+  username: String!,
+  """
+    @scalar Email
+  """
+  email: String!,
+  """
+    This is a password
+    @writeOnly
+  """
+  password: String!,
+  cart: CartCreateNestedOneWithoutUserInput,
+}
+
+input UserUncheckedCreateInput  {
+  """
+    @mock faker.name.firstName
+  """
+  name: String!,
+  """
+    @createOnly
+  """
+  username: String!,
+  """
+    @scalar Email
+  """
+  email: String!,
+  """
+    This is a password
+    @writeOnly
+  """
+  password: String!,
+  cart: CartUncheckedCreateNestedOneWithoutUserInput,
+}
+
+input UserUpdateInput  {
+  """
+    @mock faker.name.firstName
+  """
+  name: String,
+  """
+    @scalar Email
+  """
+  email: String,
+  """
+    This is a password
+    @writeOnly
+  """
+  password: String,
+  cart: CartUpdateOneWithoutUserNestedInput,
+}
+
+input UserUncheckedUpdateInput  {
+  """
+    @mock faker.name.firstName
+  """
+  name: String,
+  """
+    @scalar Email
+  """
+  email: String,
+  """
+    This is a password
+    @writeOnly
+  """
+  password: String,
+  cart: CartUncheckedUpdateOneWithoutUserNestedInput,
+}
+
+input UserCreateManyInput  {
+  """
+    @mock faker.name.firstName
+  """
+  name: String!,
+  """
+    @createOnly
+  """
+  username: String!,
+  """
+    @scalar Email
+  """
+  email: String!,
+  """
+    This is a password
+    @writeOnly
+  """
+  password: String!,
+}
+
+input UserUpdateManyMutationInput  {
+  """
+    @mock faker.name.firstName
+  """
+  name: String,
+  """
+    @scalar Email
+  """
+  email: String,
+  """
+    This is a password
+    @writeOnly
+  """
+  password: String,
+}
+
+input UserUncheckedUpdateManyInput  {
+  """
+    @mock faker.name.firstName
+  """
+  name: String,
+  """
+    @scalar Email
+  """
+  email: String,
+  """
+    This is a password
+    @writeOnly
+  """
+  password: String,
+}
+
+input UserCountOrderByAggregateInput  {
+  """
+    @readOnly
+  """
+  id: SortOrder,
+  """
+    @mock faker.name.firstName
+  """
+  name: SortOrder,
+  """
+    @createOnly
+  """
+  username: SortOrder,
+  """
+    @scalar Email
+  """
+  email: SortOrder,
+  """
+    @readOnly
+  """
+  createdAt: SortOrder,
+  """
+    @readOnly
+  """
+  updatedAt: SortOrder,
+}
+
+input UserMaxOrderByAggregateInput  {
+  """
+    @readOnly
+  """
+  id: SortOrder,
+  """
+    @mock faker.name.firstName
+  """
+  name: SortOrder,
+  """
+    @createOnly
+  """
+  username: SortOrder,
+  """
+    @scalar Email
+  """
+  email: SortOrder,
+  """
+    @readOnly
+  """
+  createdAt: SortOrder,
+  """
+    @readOnly
+  """
+  updatedAt: SortOrder,
+}
+
+input UserMinOrderByAggregateInput  {
+  """
+    @readOnly
+  """
+  id: SortOrder,
+  """
+    @mock faker.name.firstName
+  """
+  name: SortOrder,
+  """
+    @createOnly
+  """
+  username: SortOrder,
+  """
+    @scalar Email
+  """
+  email: SortOrder,
+  """
+    @readOnly
+  """
+  createdAt: SortOrder,
+  """
+    @readOnly
+  """
+  updatedAt: SortOrder,
+}
+
+input UserRelationFilter  {
+  is: UserWhereInput,
+  isNot: UserWhereInput,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input UserCreateNestedOneWithoutCartInputcreateOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: UserCreateWithoutCartInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relational: UserUncheckedCreateWithoutCartInput,
+}
+
+input UserCreateNestedOneWithoutCartInput  {
+  create: UserCreateNestedOneWithoutCartInputcreateOneOf,
+  connectOrCreate: UserCreateOrConnectWithoutCartInput,
+  connect: UserWhereUniqueInput,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input UserUpdateOneRequiredWithoutCartNestedInputcreateOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: UserCreateWithoutCartInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relational: UserUncheckedCreateWithoutCartInput,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input UserUpdateOneRequiredWithoutCartNestedInputupdateOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: UserUpdateWithoutCartInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relational: UserUncheckedUpdateWithoutCartInput,
+}
+
+input UserUpdateOneRequiredWithoutCartNestedInput  {
+  create: UserUpdateOneRequiredWithoutCartNestedInputcreateOneOf,
+  connectOrCreate: UserCreateOrConnectWithoutCartInput,
+  upsert: UserUpsertWithoutCartInput,
+  connect: UserWhereUniqueInput,
+  update: UserUpdateOneRequiredWithoutCartNestedInputupdateOneOf,
+}
+
+input UserCreateWithoutCartInput  {
+  """
+    @mock faker.name.firstName
+  """
+  name: String!,
+  """
+    @createOnly
+  """
+  username: String!,
+  """
+    @scalar Email
+  """
+  email: String!,
+  """
+    This is a password
+    @writeOnly
+  """
+  password: String!,
+}
+
+input UserUncheckedCreateWithoutCartInput  {
+  """
+    @mock faker.name.firstName
+  """
+  name: String!,
+  """
+    @createOnly
+  """
+  username: String!,
+  """
+    @scalar Email
+  """
+  email: String!,
+  """
+    This is a password
+    @writeOnly
+  """
+  password: String!,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input UserCreateOrConnectWithoutCartInputcreateOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: UserCreateWithoutCartInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relational: UserUncheckedCreateWithoutCartInput,
+}
+
+input UserCreateOrConnectWithoutCartInput  {
+  where: UserWhereUniqueInput!,
+  create: UserCreateOrConnectWithoutCartInputcreateOneOf,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input UserUpsertWithoutCartInputupdateOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: UserUpdateWithoutCartInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relational: UserUncheckedUpdateWithoutCartInput,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input UserUpsertWithoutCartInputcreateOneOf @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: UserCreateWithoutCartInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relational: UserUncheckedCreateWithoutCartInput,
+}
+
+input UserUpsertWithoutCartInput  {
+  update: UserUpsertWithoutCartInputupdateOneOf,
+  create: UserUpsertWithoutCartInputcreateOneOf,
+}
+
+input UserUpdateWithoutCartInput  {
+  """
+    @mock faker.name.firstName
+  """
+  name: String,
+  """
+    @scalar Email
+  """
+  email: String,
+  """
+    This is a password
+    @writeOnly
+  """
+  password: String,
+}
+
+input UserUncheckedUpdateWithoutCartInput  {
+  """
+    @mock faker.name.firstName
+  """
+  name: String,
+  """
+    @scalar Email
+  """
+  email: String,
+  """
+    This is a password
+    @writeOnly
+  """
+  password: String,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input createOneUserInput @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: UserCreateInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relational: UserUncheckedCreateInput,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input updateOneUserInput @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nested: UserUpdateInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relational: UserUncheckedUpdateInput,
+}
+
+"""
+  Auto generated to handle type-union in GraphQL
+"""
+input updateManyUserInput @oneOf {
+  """
+    Relations presented as nested objects
+  """
+  nestedMany: UserUpdateManyMutationInput,
+  """
+    Relations represented by ids (FK)
+  """
+  relationalMany: UserUncheckedUpdateManyInput,
+}
+
+type AggregateUser  {
+  _count: UserCountAggregateOutputType,
+  _min: UserMinAggregateOutputType,
+  _max: UserMaxAggregateOutputType,
+}
+
+type UserGroupByOutputType  {
+  """
+    @readOnly
+  """
+  id: String,
+  """
+    @mock faker.name.firstName
+  """
+  name: String,
+  """
+    @createOnly
+  """
+  username: String,
+  """
+    @scalar Email
+  """
+  email: String,
+  """
+    @readOnly
+  """
+  createdAt: DateTime,
+  """
+    @readOnly
+  """
+  updatedAt: DateTime,
+  _count: UserCountAggregateOutputType,
+  _min: UserMinAggregateOutputType,
+  _max: UserMaxAggregateOutputType,
+}
+
+type UserCountAggregateOutputType  {
+  """
+    @readOnly
+  """
+  id: Int,
+  """
+    @mock faker.name.firstName
+  """
+  name: Int,
+  """
+    @createOnly
+  """
+  username: Int,
+  """
+    @scalar Email
+  """
+  email: Int,
+  """
+    @readOnly
+  """
+  createdAt: Int,
+  """
+    @readOnly
+  """
+  updatedAt: Int,
+  _all: Int,
+}
+
+type UserMinAggregateOutputType  {
+  """
+    @readOnly
+  """
+  id: String,
+  """
+    @mock faker.name.firstName
+  """
+  name: String,
+  """
+    @createOnly
+  """
+  username: String,
+  """
+    @scalar Email
+  """
+  email: String,
+  """
+    @readOnly
+  """
+  createdAt: DateTime,
+  """
+    @readOnly
+  """
+  updatedAt: DateTime,
+}
+
+type UserMaxAggregateOutputType  {
+  """
+    @readOnly
+  """
+  id: String,
+  """
+    @mock faker.name.firstName
+  """
+  name: String,
+  """
+    @createOnly
+  """
+  username: String,
+  """
+    @scalar Email
+  """
+  email: String,
+  """
+    @readOnly
+  """
+  createdAt: DateTime,
+  """
+    @readOnly
+  """
+  updatedAt: DateTime,
+}

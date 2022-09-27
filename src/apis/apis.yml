@@ -1,0 +1,17 @@
+# pattern matcher docs [micromatch](https://github.com/micromatch/micromatch)
+
+description: "Default API definition"
+apis:
+  - name: graphql
+    description: "Default API. Exposes ALL nouns and verbs in a single API (can be safely removed)"
+    matchers:
+      - "**/*"
+  ## Add custom APIs here
+  # - name: search
+  #   description: "Example search API, exposes only 'find*' methods"
+  #   matchers:
+  #     - "**/find*"
+  # - name: custom
+  #   description: "Create your own API"
+  #   matchers:
+  #     - ...

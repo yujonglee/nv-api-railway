@@ -1,0 +1,32 @@
+# ======= DO NOT EDIT =======
+# This file is auto-generated
+# ---------------------------
+
+# GraphQL SDL Reference: https://graphql.org/learn/schema/
+
+# Prisma errors: https://www.prisma.io/docs/reference/api-reference/error-reference
+
+type Query {
+  health (
+    level: nvHealthCheckEnum,
+  ): Json!,
+
+}
+
+type Mutation {
+  # Prevent direct SQL access via external API. That is Dangerous stuff! 
+  # executeRaw (
+  #  query: String!,
+  #  parameters: Json,
+  # ): Json!,
+
+  # Prevent direct SQL access via external API. That is Dangerous stuff! 
+  # queryRaw (
+  #  query: String!,
+  #  parameters: Json,
+  # ): Json!,
+
+  # GraphQL does not allow definition of empty types.
+  # 'noop' allows 'type Mutation' to be defined in core
+  noop(input: Int): Int
+}

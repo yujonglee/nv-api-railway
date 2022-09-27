@@ -1,0 +1,7 @@
+# ======= DO NOT EDIT =======
+# This file is auto-generated
+# ---------------------------
+
+# GraphQL SDL Reference: https://graphql.org/learn/schema/
+
+directive @oneOf on INPUT_OBJECT | FIELD_DEFINITION
