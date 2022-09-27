@@ -1,0 +1,9 @@
+.env
+.junk
+.tmp
+coverage
+junk
+node_modules
+nv_rpc.json
+schema.dmmf
+tmp
